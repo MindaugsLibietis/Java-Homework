@@ -16,6 +16,17 @@ public class Main {
         System.out.println("Temperature in celsius = " + y);
         System.out.println("Temperature in celsius rounded = " + rounded);
         //System.out.printf("Temperature in celsius rounded = %.2f" + "\n", y);
+        System.out.println("Would you wish to convert c to f? y or n :");
+        z = sc.next().charAt(0);
+        if (z == 'y') {
+            System.out.println("Enter temperature in celsius: ");
+            c = sc.nextDouble();
+            sc.close();
+            v = ( c * 9 / 5 + 32);
+            System.out.println("Temperature in farenheit = " + v);
+            System.out.printf("Temperature in farenheit rounded = %.2f" + "\n", v);
+        } else if (z == 'n'){
+            System.out.println("End of this programm");
         }
 
     }
