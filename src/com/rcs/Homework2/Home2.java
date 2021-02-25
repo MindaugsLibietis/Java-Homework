@@ -9,9 +9,9 @@ public class Home2 {
         int x = sc.nextInt();
         System.out.println("Lūdzu ievadi y koordināti : ");
         int y = sc.nextInt();
-        if (x > -2 && x < 3 && y > -4 && y < 1){
+        if (x > -2 && x < 3 && y > -4 && y < 1) {
             System.out.println("you are in target");
-        } else if (x >= -2 && x <= 3 && y >= -4 && y <= 1){
+        } else if (x >= -2 && x <= 3 && y >= -4 && y <= 1) {
             System.out.println("right on edge");
         } else {
             System.out.println("out of bounds");
