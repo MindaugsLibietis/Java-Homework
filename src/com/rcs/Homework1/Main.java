@@ -6,8 +6,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        double x, y, c, v;
-        char z;
+        double x, y;
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter temperature in Farenheits:");
         x = sc.nextDouble();
