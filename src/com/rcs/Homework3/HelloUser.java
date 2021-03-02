@@ -5,13 +5,13 @@ import java.util.Scanner;
 
 public class HelloUser {
     public static void main(String[] args) {
-        Scanner sc = new Scanner (System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println("Lūdzu ievadiet vārdu un uzvārdu : ");
         String fullName = sc.nextLine();
         sc.close();
         /*versija 1 strādā ar vairākiem uzvārdiem, bet nestrādā ar vairākām atstarpēm*/
 /*        String[] splitString = fullName.split(" ");
-        String firstLetter = splitString[0].substring(0 ,1);
+        String firstLetter = splitString[0].substring(0, 1);
         String remainingLetters = splitString[0].substring(1, splitString[0].length());
         firstLetter = firstLetter.toUpperCase();
         splitString[0] = firstLetter + remainingLetters;
