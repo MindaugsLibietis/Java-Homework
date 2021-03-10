@@ -18,7 +18,11 @@ public class SortArray {
         for (int i = 0; i < arr.length; i++) {
             arr[i] = ran.nextInt(90) + 10;
         }
-        System.out.println("Random array : " + Arrays.toString(arr));
+//        System.out.println("Random array : " + Arrays.toString(arr));
+        System.out.print("Random array : ");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + ((i < arr.length - 1) ? " ," : ""));
+        }
         for (int i = 0; i < arr.length; i++) {
             for (int j = 1; j < (arr.length - i); j++) {
                 int temp = 0;
@@ -29,10 +33,11 @@ public class SortArray {
                 }
             }
         }
-        System.out.println("Sorted array : " + Arrays.toString(arr));
-/*        for (int num : arr){
-            System.out.printf("d% ,", num);
-        }*/
+        System.out.println();
+        System.out.print("Sorted array : ");
+        for (int i = 0; i < arr.length; i++){
+            System.out.print(arr[i] + ((i< arr.length - 1) ? " ," : ""));
+        }
 
     }
 }
