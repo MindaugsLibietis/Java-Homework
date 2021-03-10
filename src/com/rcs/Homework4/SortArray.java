@@ -21,7 +21,7 @@ public class SortArray {
 //        System.out.println("Random array : " + Arrays.toString(arr));
         System.out.print("Random array : ");
         for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + ((i < arr.length - 1) ? " ," : ""));
+            System.out.print(arr[i] + ((i < arr.length - 1) ? " , " : ""));
         }
         for (int i = 0; i < arr.length; i++) {
             for (int j = 1; j < (arr.length - i); j++) {
@@ -36,7 +36,7 @@ public class SortArray {
         System.out.println();
         System.out.print("Sorted array : ");
         for (int i = 0; i < arr.length; i++){
-            System.out.print(arr[i] + ((i< arr.length - 1) ? " ," : ""));
+            System.out.print(arr[i] + ((i< arr.length - 1) ? " , " : ""));
         }
 
     }
