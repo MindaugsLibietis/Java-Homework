@@ -8,7 +8,6 @@ public class Matrices {
         Random rnd = new Random();
         Scanner sc = new Scanner(System.in);
         int n = rnd.nextInt(4)+3;
-//        int z = rnd.nextInt(101);
         int[][] array = new int [n][n];
         System.out.println("Do you wish to fill array manualy? (yes - y ; no - n):");
         char mor = sc.next().charAt(0);
@@ -26,15 +25,37 @@ public class Matrices {
                 }
                 System.out.println();
             }
-
+            System.out.println();
+            for(int i = 0; i< array.length; i++){
+                for(int j = 0 ;j< array[i].length; j++){
+                    if(i == j) {
+                        System.out.printf("%5d", array[i][j]);
+                    } else {
+                        System.out.printf("%5d", 0);
+                    }
+                }
+                System.out.println();
+            }
         } else if (mor == 'n'){
             for (int i = 0; i < array.length; i++) {
                 for (int j = 0; j < array[i].length; j++) {
                     array[i][j]= rnd.nextInt(101);
                     System.out.printf("%5d", array[i][j]);
+                    }
+                System.out.println();
+                }
+            System.out.println();
+            for (int i = 0; i < array.length; i++) {
+                for (int j = 0; j < array[i].length; j++) {
+                    if(i == j) {
+                        System.out.printf("%5d", array[i][j]);
+                    } else {
+                        System.out.printf("%5d", 0);
+                    }
                 }
                 System.out.println();
             }
+
         } else {
             System.out.println("Wrong input");
         }
