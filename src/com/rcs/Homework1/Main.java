@@ -6,20 +6,14 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        double x, y;
+        double x, y, c, z, v;
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter temperature in Farenheits:");
         x = sc.nextDouble();
-<<<<<<< HEAD
-        sc.close();
-=======
->>>>>>> dev
         y = (5 * (x - 32)) / 9;
         double rounded = Math.round(y * 100) / 100.0;
         System.out.println("Temperature in celsius = " + y);
         System.out.println("Temperature in celsius rounded = " + rounded);
-<<<<<<< HEAD
-=======
         System.out.println("Would you wish to convert c to f? y or n :");
         z = sc.next().charAt(0);
         if (z == 'y') {
@@ -34,8 +28,6 @@ public class Main {
         } else {
             System.out.println("bad operator");
         }
-
->>>>>>> dev
     }
 
 }
