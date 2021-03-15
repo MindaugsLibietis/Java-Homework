@@ -7,22 +7,44 @@ public class SortArray2D {
     public static void main(String[] args) {
         Scanner sc = new Scanner (System.in);
         Random rnd = new Random();
-        System.out.println("ievadiet rindas izmēru [5;15] ");
-        int izm = sc.nextInt();
+        int n = rnd.nextInt(12)+4;
+        int m;
+        do {
+            System.out.println("ievadiet rindas izmēru [5;15] ");
+            m = sc.nextInt();
+        } while (m < 5 || m > 15);
         sc.close();
-        int izm2 = rnd.nextInt(12)+3;
-        int[][] array = new int [izm][izm2];
-        if (izm >= 5 && izm <= 15){
-
-            for (int i = 0; i > array.length; i++) {
-                for (int j = 0; j > array[i].length; j++) {
-                    array[i][j]= rnd.nextInt(900)+100;
-                    System.out.printf("%5d", array[i][j]);
-                }
-                System.out.println();
+        int[][] array = new int [m][n];
+        System.out.println(array.length);
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                array[i][j]= rnd.nextInt(900)+100;
+                System.out.printf("%5d", array[i][j]);
             }
-        } else{
-            System.out.println("nepareiza ievade");
+            System.out.println();
+        }
+        System.out.println();
+        for (int i = 0; i < array.length; i++){
+            for (int j = 0;j < array[i].length; j++){
+                for (int k = 0; k < array[i].length - j - 1; k++){
+                    if (array[i][k] < array[i][k+1]){
+                        int t = array[i][k];
+                        array[i][k] = array[i][k + 1];
+                        array[i][k + 1] = t;
+                    }
+                }
+            }
+        }
+        for (int i = 0; i < array[0].length; i++) {
+            int t = array[0][i];
+            array[0][i] = array[m-1][i];
+            array[m-1][i] = t;
+        }
+        for (int i = 0; i < array.length; i++){
+            for (int j =0; j < array[i].length; j++){
+                System.out.printf("%5d", array[i][j]);
+            }
+            System.out.println();
         }
     }
 }
