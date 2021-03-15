@@ -14,7 +14,7 @@ public class Matrices {
         if (mor == 'y') {
             for (int i = 0; i < array.length; i++) {
                 for (int j = 0; j < array[i].length; j++) {
-                    System.out.println("Matrix" + "[" + i + "]" + "[" + j + "]");
+                    System.out.printf("Matrix [%d] [%d]", i , j);
                     array[i][j] = sc.nextInt();
                 }
                 System.out.println();
