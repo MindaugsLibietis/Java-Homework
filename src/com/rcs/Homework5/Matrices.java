@@ -20,9 +20,9 @@ public class Matrices {
                 System.out.println();
             }
             sc.close();
-            for (int i = 0; i < array.length; i++) {
-                for (int j = 0; j < array[i].length; j++) {
-                    System.out.printf("%5d", array[i][j]);
+            for(int[] row : array){
+                for (int column : row){
+                    System.out.printf("%5d", column);
                 }
                 System.out.println();
             }
