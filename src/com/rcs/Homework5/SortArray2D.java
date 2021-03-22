@@ -35,11 +35,9 @@ public class SortArray2D {
                 }
             }
         }
-        for (int i = 0; i < array[0].length; i++) {
-            int t = array[0][i];
-            array[0][i] = array[m-1][i];
-            array[m-1][i] = t;
-        }
+            int[] t = array[0];
+            array[0] = array[m - 1];
+            array[m - 1] = t;
         for(int[] row : array){
             for (int column : row){
                 System.out.printf("%5d", column);
