@@ -11,6 +11,11 @@ public class ToDoItem {
         this.completed = completed;
     }
 
+    public ToDoItem(String description, Priority priority) {
+        this.description = description;
+        this.priority = priority;
+    }
+
     public String getDescription() {
         return this.description;
     }
