@@ -7,6 +7,9 @@ public class ToDoItems {
     private String title;
     private List<ToDoItem> toDoItems = new ArrayList<>();
 
+    public ToDoItems() {
+    }
+
     public ToDoItems(String title, List<ToDoItem> toDoItems) {
         this.title = title;
         this.toDoItems = toDoItems;
@@ -23,27 +26,21 @@ public class ToDoItems {
     }
 
     public void displayCompletedItems() {
-
-        List<ToDoItem> completedList = new ArrayList<ToDoItem>();
-
         for (ToDoItem item : toDoItems) {
             if (item.isCompleted()) {
-                completedList.add(item);
+                System.out.println(item.toString());
             }
         }
-        System.out.println(completedList);
+
     }
 
     public void displayUncompletedItems() {
-
-        List<ToDoItem> uncompletedList = new ArrayList<ToDoItem>();
-
         for (ToDoItem item : toDoItems) {
             if (!item.isCompleted()) {
-                uncompletedList.add(item);
+                System.out.println(item);
             }
         }
-        System.out.println(uncompletedList);
+
     }
 
     public void markCompletion(int toDoItemNum,boolean bool) {
