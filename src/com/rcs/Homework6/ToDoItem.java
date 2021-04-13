@@ -42,6 +42,10 @@ public class ToDoItem {
 
     @Override
     public String toString() {
-        return String.format("Description: %s, Priority: %s, Completed: %s", this.description, this.priority, this.completed);
+        if (this.completed ) {
+            return String.format("Description: %s, Priority: %s, Completed: Yes", this.description, this.priority);
+        } else {
+            return String.format("Description: %s, Priority: %s, Completed: No", this.description, this.priority);
+        }
     }
 }

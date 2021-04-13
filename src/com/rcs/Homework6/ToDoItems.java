@@ -7,6 +7,14 @@ public class ToDoItems {
     private String title;
     private List<ToDoItem> toDoItems = new ArrayList<>();
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return this.title;
+    }
+
     public ToDoItems() {
     }
 

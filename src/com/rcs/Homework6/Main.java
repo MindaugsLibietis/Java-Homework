@@ -1,6 +1,5 @@
 package com.rcs.Homework6;
 
-import jdk.nashorn.internal.ir.annotations.Ignore;
 
 import java.util.Scanner;
 
@@ -10,6 +9,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         System.out.println("Please name your To-Do list: ");
         String toDoName = sc.nextLine();
+        list.setTitle(toDoName);
         while (true) {
             System.out.println("What do you wish to do? ");
             System.out.println("1. Add To-Do Items");
@@ -17,13 +17,15 @@ public class Main {
             System.out.println("3. Display all To-Do Items");
             System.out.println("4. Display uncompleted To-Do Items");
             System.out.println("5. Display completed To-Do Items");
-            int toDo = sc.nextInt();
-            sc.nextLine();
             int counter = 1;
+            String toDo = sc.nextLine();
+            if (toDo.toUpperCase().equals("Q")) {
+                break;
+            }
             switch (toDo) {
-                case 1:
+                case "1":
                     while (true) {
-                            System.out.printf("Adding item #%d to list '%s'\n", counter, toDoName);
+                            System.out.printf("Adding item #%d to list '%s'\n", counter, list.getTitle());
                             System.out.println("Enter description: ");
                             String descritption = sc.nextLine();
                             System.out.println("Enter priority: ");
@@ -40,7 +42,7 @@ public class Main {
                             counter++;
                         }
                     break;
-                case 2:
+                case "2":
                     while (true) {
                         System.out.println("Enter To-Do item number: ");
                         int itemNumber = sc.nextInt();
@@ -48,42 +50,21 @@ public class Main {
                         boolean taskCompleted = sc.nextBoolean();
                         list.markCompletion(itemNumber, taskCompleted);
                         sc.nextLine();
-                        System.out.println("Press enter to continue or 'q' to stop adding items...");
+                        System.out.println("Press enter to continue or 'q' to stop marking items...");
                         String action = sc.nextLine();
                         if (action.equalsIgnoreCase("Q")) {
                             break;
                         }
                     }
                     break;
-                case 3:
-                    while (true) {
+                case "3":
                         list.displayItems();
-                        System.out.println("Press enter to continue or 'q' to stop adding items...");
-                        String action = sc.nextLine();
-                        if (action.equalsIgnoreCase("Q")) {
-                            break;
-                        }
-                    }
                     break;
-                case 4:
-                    while (true) {
+                case "4":
                         list.displayUncompletedItems();
-                        System.out.println("Press enter to continue or 'q' to stop adding items...");
-                        String action = sc.nextLine();
-                        if (action.equalsIgnoreCase("Q")) {
-                            break;
-                        }
-                    }
                     break;
-                case 5:
-                    while (true) {
+                case "5":
                         list.displayCompletedItems();
-                        System.out.println("Press enter to continue or 'q' to stop adding items...");
-                        String action = sc.nextLine();
-                        if (action.equalsIgnoreCase("Q")) {
-                            break;
-                        }
-                    }
                     break;
                 default:
                     System.out.println("Nothing was chosen");
